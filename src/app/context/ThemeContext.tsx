@@ -1,4 +1,5 @@
 "use client";
+
 import React, {createContext,useState,ReactNode} from "react";
 export const ThemeContext = createContext({
     darkMode : false,
@@ -11,7 +12,7 @@ export const ThemeProvider = ({children } : {children : ReactNode}) => {
 
     return(
          <ThemeContext.Provider value={{ darkMode, toggleTheme }}>
-      {children}  {}
+      {children}  
     </ThemeContext.Provider>
   );
 };
