@@ -1,6 +1,6 @@
 "use client";
 import { useContext } from "react";
-import TopNavBar from "./component/header/TopNavBar";
+
 import ThemeToggle from "./component/ThemeToggle";
 import { ThemeContext } from "./context/ThemeContext";
 import { auth } from "./firebaseConfig";

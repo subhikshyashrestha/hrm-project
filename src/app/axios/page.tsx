@@ -3,8 +3,15 @@
 import  {useEffect,useState} from "react";
 import axios from "axios";
 
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+
 export default function AxiosPage(){
-    const [users,setUsers] = useState<any[]>([]);
+    const [users,setUsers] = useState<User[]>([]);
 
     useEffect(()=>{
         axios.get("https://jsonplaceholder.typicode.com/users")

@@ -1,8 +1,14 @@
 "use client"
- import React, {useEffect,useState } from "react"
+ import React, {useEffect,useState } from "react";
 
- export default function fetchPage(){
-    const [users,setusers] = useState <any[]>([]);
+ interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+ export default function FetchPage(){
+    const [users,setusers] = useState <User[]>([]);
     const [loading,setloading]= useState(true);
     const [error,setError] = useState<string | null>(null);
 
@@ -15,7 +21,7 @@
 
             return res.json();
         })
-        .then((data) =>{
+        .then((data:User[]) =>{
             setusers(data);
             setloading(false);
         })
